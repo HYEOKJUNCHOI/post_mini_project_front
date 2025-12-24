@@ -1,7 +1,5 @@
 function SignUp() {
-
-    return <>
-        </>
+    return <></>
 }
 
 export default SignUp;

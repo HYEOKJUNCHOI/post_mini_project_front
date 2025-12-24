@@ -1,9 +1,10 @@
 import { useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Logout() {
-    const navigate = useNavigate(); 
+    const navigate = useNavigate();
     localStorage.removeItem("AccessToken");
+    
     useEffect(() => {
         alert("로그아웃");
         navigate("/auth/login");
@@ -11,6 +12,5 @@ function Logout() {
 
     return <></>
 }
-
 
 export default Logout;

@@ -2,8 +2,8 @@ import { css } from "@emotion/react";
 
 export const layout = css`
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
 `;
@@ -14,11 +14,11 @@ export const frame = css`
     border: 3px solid #747474;
     border-radius: 30px;
     padding: 30px;
+    min-width: 1000px;
     width: 1000px;
     height: 650px;
-    background-color: #222222;
+    background-color: #000000;
 `;
-
 
 export const frameContainer = css`
     position: relative;
@@ -28,11 +28,11 @@ export const frameContainer = css`
     height: 100%;
     background-color: #f3f5f7;
     overflow: hidden;
-
 `;
 
-//////////////<< Loading >>////////////////////
 
+
+////////////<< Loading >>////////////
 export const loadingBox = css`
     display: flex;
     justify-content: center;
@@ -44,32 +44,33 @@ export const loadingBox = css`
     width: 100%;
     height: 100%;
     background-color: #00000066;
-
 `;
 
-//////////////<< leftSideBar >>////////////////////
+////////////<< LeftSideBar >>////////////
 
 export const sideBarLayout = css`
-
+    position: relative;
     display: flex;
     width: 100%;
     height: 100%;
+
 `;
 
 export const sideBarContainer = css`
     display: flex;
     flex-direction: column;
-    width: 240px;
+    min-width: 200px;
+    width: 200px;
     height: 100%;
     background-color: #ffffff;
 
-    & > h1 { 
+    & > h1 {
         margin: 20px;
         font-size: 20px;
-        text-align:center;
-        text-shadow: 0 0 20px #00000077;
+        text-align: center;
+        text-shadow: 0 0 20px #00000099;
         cursor: default;
-        transition: all 0.8s ease-in-out;
+        transition: all 0.3s ease-in-out;
         &:hover {
             transform: scale(105%);
         }
@@ -79,39 +80,34 @@ export const sideBarContainer = css`
         list-style-type: none;
         display: flex;
         flex-direction: column;
-        margin: 0 10px;
+        margin: 0;
         padding: 0;
         gap: 8px;
         flex-grow: 1;
-    
-    & > a {
-        text-decoration: none;
-        color: #222222;
-        }           
+        & > a {
+            text-decoration: none;
+            color: #222222;
+        }
     }
 
     & > div {
-        display:flex;
+        display: flex;
         justify-content: center;
-        padding: 10px;
-        
+        padding: 20px;
 
-    & > a {
-        text-decoration:none;
-        color: #222222;
-        font-weight: 500;
-        text-shadow: 0 0 10px #00000088;
-
+        & > a {
+            text-decoration: none;
+            color: #222222;
+            font-weight: 500;
+            text-shadow: 0 0 10px #00000088;
         }
-
     }
-
 `;
 
 export const menuListItem = (isSelected) => css`
     display: flex;
     align-items: center;
-    box-sizing:border-box;
+    box-sizing: border-box;
     padding: 5px 15px;
     width: 100%;
     height: 35px;
@@ -131,12 +127,12 @@ export const menuListItem = (isSelected) => css`
         height: 100%;
         font-size: 20px;
     }
-
 `;
 
 export const profileImg = (url) => css`
-    width: 30px;
-    height: 30px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
     overflow: hidden;
     background-image: url(${url});
     background-position: center;
